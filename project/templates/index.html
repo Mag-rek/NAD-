@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>URL Predictor</title>
+</head>
+<body>
+    <h1>URL Predictor</h1>
+
+    <form method="POST">
+        <label for="url">Enter a URL:</label>
+        <input type="text" name="url" required>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    {% if prediction %}
+        <p>Prediction: {{ prediction }}</p>
+    {% endif %}
+</body>
+</html>
